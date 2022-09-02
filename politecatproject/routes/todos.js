@@ -5,7 +5,7 @@ const { ensureAuth, ensureGuest } = require('../middleware/auth')
 
 //////Authentification
 
-router.get('/', ensureAuth, gamesController.getFavorites)
+router.get('/', ensureAuth, gamesController.getFaves)
 
 router.post('/createFave', gamesController.createFave)
 
