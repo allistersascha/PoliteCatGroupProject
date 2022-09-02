@@ -1,0 +1,125 @@
+<!-- I have combined the favorites.ejs and todos.ejs files from Glitch, as I think we'll be wanting pieces from both. Here is favorites:-->
+
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorites</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Profile Page</h1>
+    <ul>
+    <% todos.forEach( el => { %> 
+            <li class='todoItem' data-id='<%=el._id%>'>
+         
+            <span class='del'> Delete </span>
+            </li>
+    <% }) %>    
+    </ul>
+      
+       <ul>
+    <% todos.forEach( el => { %> 
+           
+              <li class='boardGame' data-id='<%=el._boardGame%>'>
+              
+            <span class='del'> Delete </span>
+            </li>
+    <% }) %>    
+    </ul>
+      
+      
+       <ul>
+    <% todos.forEach( el => { %> 
+        
+                <li class='videoGame' data-id='<%=el._videoGame%>'>
+               
+            <span class='del'> Delete </span>
+            </li>
+    <% }) %>    
+    </ul>
+
+      
+            
+       <ul>
+    <% todos.forEach( el => { %> 
+           
+                  <li class='cardGame' data-id='<%=el._cardGame%>'>
+                   
+            <span class='del'> Delete </span>
+            </li>
+    <% }) %>    
+    </ul>
+      
+          <ul>
+    <% todos.forEach( el => { %> 
+           
+                    <li class='userId' data-id='<%=el._userId%>'>
+            <span class='del'> Delete </span>
+            </li>
+    <% }) %>    
+    </ul>
+            
+<!--        <ul>
+    <% todos.forEach( el => { %> 
+            <li class='todoItem' data-id='<%=el._id%>'>
+              <li class='boardGame' data-id='<%=el._boardGame%>'>
+                <li class='videoGame' data-id='<%=el._videoGame%>'>
+                  <li class='cardGame' data-id='<%=el._cardGame%>'>
+                    <li class='userId' data-id='<%=el._userId%>'>
+            <span class='del'> Delete </span>
+            </li>
+    <% }) %>    
+    </ul> -->
+<!--
+    <form action="/todos/createFaveGame" method='POST'>
+        <input type="text" placeholder="Enter Favorite game" name='faveGameItem'>
+        <input type="submit">
+    </form> -->
+
+    <a href="/logout">Logout</a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+<!--and here is todos:-->
+
+// the main page that lists the users todo -np
+// model -> toDo schema 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Todos</h1>
+    <ul>
+    <% todos.forEach( el => { %>
+            <li class='todoItem' data-id='<%=el._id%>'>
+                <span class='del'> Delete </span>
+            </li>
+    <% }) %>    
+    </ul>
+
+
+    <form action="/todos/createFaveGame" method='POST'>
+        <input type="text" placeholder="Enter Todo Item" name='faveGameItem'>
+        <input type="submit">
+    </form>
+
+    <a href="/logout">Logout</a>
+  <a href="/favorites">Favorite Games</a>
+    <script src="js/main.js"></script>
+</body>
+</html>
