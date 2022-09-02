@@ -27,16 +27,27 @@ module.exports = {
       console.log(err);
     }
   },
+  deleteFave: async (req, res) => {
+    console.log(req.body.todoIdFromJSFile);
+    try {
+      await Favegame.findOneAndDelete({ _id: req.body.todoIdFromJSFile });
+      console.log("Deleted Todo");
+      res.json("Deleted It");
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
 };
 // delete a todo on the list
-deleteFave: async (req, res) => {
-  console.log(req.body.todoIdFromJSFile);
-  try {
-    await Favegame.findOneAndDelete({ _id: req.body.todoIdFromJSFile });
-    console.log("Deleted Todo");
-    res.json("Deleted It");
-  } catch (err) {
-    console.log(err);
-  }
-};
+// deleteFave: async (req, res) => {
+//   console.log(req.body.todoIdFromJSFile);
+//   try {
+//     await Favegame.findOneAndDelete({ _id: req.body.todoIdFromJSFile });
+//     console.log("Deleted Todo");
+//     res.json("Deleted It");
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
 
