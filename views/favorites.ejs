@@ -65,7 +65,7 @@
     <% }) %>    
     </ul>
             
-<!--        <ul>
+    <ul>
     <% todos.forEach( el => { %> 
             <li class='todoItem' data-id='<%=el._id%>'>
               <li class='boardGame' data-id='<%=el._boardGame%>'>
@@ -80,7 +80,7 @@
     <form action="/todos/createFaveGame" method='POST'>
         <input type="text" placeholder="Enter Favorite game" name='faveGameItem'>
         <input type="submit">
-    </form> -->
+    </form>
 
     <a href="/logout">Logout</a>
 
@@ -88,7 +88,7 @@
 </body>
 </html>
 
-<!--and here is todos:-->
+and here is todos:-->
 
 // the main page that lists the users todo -np
 // model -> toDo schema 
@@ -113,8 +113,12 @@
     </ul>
 
 
-    <form action="/todos/createFaveGame" method='POST'>
+    <form action="/todos/createFave" method='POST'>
         <input type="text" placeholder="Enter Todo Item" name='faveGameItem'>
+        </br/>
+        <label>Board game</label><input type="checkbox" id="boardGame" name="boardGame" value="Board game">
+        <label>Video game</label><input type="checkbox" id="videoGame" name="videoGame" value="Video game">
+        <label>Card game</label><input type="checkbox" id="cardGame" name="cardGame" value="Card game">
         <input type="submit">
     </form>
 
