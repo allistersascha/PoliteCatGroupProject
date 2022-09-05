@@ -113,14 +113,16 @@ and here is todos:-->
     </ul>
 
 
-    <form action="/todos/createFave" method='POST'>
+    <form action="/favorites/createFave" method='POST'>
         <input type="text" placeholder="Enter Todo Item" name='faveGameItem'>
         </br/>
-        <label>Board game</label><input type="checkbox" id="boardGame" name="boardGame" value="Board game">
-        <label>Video game</label><input type="checkbox" id="videoGame" name="videoGame" value="Video game">
-        <label>Card game</label><input type="checkbox" id="cardGame" name="cardGame" value="Card game">
+        <input type="checkbox" name="boardGame" id="boardGame"><label for="boardGame">Board Game</label>
+        <input type="checkbox" name="videoGame" id="videoGame"><label for="videoGame">Video Game</label>
+        <input type="checkbox" name="cardGame" id="cardGame"><label for="cardGame">Card Game</label>
         <input type="submit">
     </form>
+
+
 
     <a href="/logout">Logout</a>
   <a href="/favorites">Favorite Games</a>
