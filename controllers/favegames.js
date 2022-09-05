@@ -7,7 +7,7 @@ module.exports = {
     console.log(req.user);
     try {
       const faveGameItem = await FaveGame.find({ userId: req.user.id });
-      res.render("favorites.ejs", { todos: faveGameItem, user: req.user });
+      res.render("favorites.ejs", { faves: faveGameItem, user: req.user });
     } catch (err) {
       console.log(err);
     }
@@ -31,10 +31,10 @@ module.exports = {
     }
   },
   deleteFave: async (req, res) => {
-    console.log(req.body.todoIdFromJSFile);
+    console.log(req.body.gameIdFromJSFile);
     try {
-      await Favegame.findOneAndDelete({ _id: req.body.todoIdFromJSFile });
-      console.log("Deleted Todo");
+      await FaveGame.findOneAndDelete({ _id: req.body.gameIdFromJSFile });
+      console.log("Deleted Game");
       res.json("Deleted It");
     } catch (err) {
       console.log(err);
