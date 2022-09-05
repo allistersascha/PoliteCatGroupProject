@@ -1,20 +1,20 @@
 const deleteBtn = document.querySelectorAll('.del')
-const todoItem = document.querySelectorAll('span.not')
+const faveGameItem = document.querySelectorAll('li.faveGameItem')
 
 Array.from(deleteBtn).forEach((el)=>{
-    el.addEventListener('click', deleteTodo)
+    el.addEventListener('click', deleteFave)
 })
 
 
 
-async function deleteTodo(){
-    const todoId = this.parentNode.dataset.id
+async function deleteFave(){
+    const gameId = this.parentNode.dataset.id
     try{
-        const response = await fetch('todos/deleteTodo', {
+        const response = await fetch('favorites/deleteFave', {
             method: 'delete',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
-                'todoIdFromJSFile': todoId
+                'gameIdFromJSFile': gameId
             })
         })
         const data = await response.json()

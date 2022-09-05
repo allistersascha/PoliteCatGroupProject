@@ -15,8 +15,8 @@
 <body>
     <h1>Profile Page</h1>
     <ul>
-    <% todos.forEach( el => { %> 
-            <li class='todoItem' data-id='<%=el._id%>'>
+    <% faves.forEach( el => { %> 
+            <li class='faveGameItem' data-id='<%=el._id%>'>
          
             <span class='del'> Delete </span>
             </li>
@@ -24,9 +24,9 @@
     </ul>
       
        <ul>
-    <% todos.forEach( el => { %> 
+    <% faves.forEach( el => { %> 
            
-              <li class='boardGame' data-id='<%=el._boardGame%>'>
+              <li class='boardGame' class='faveGameItem' data-id='<%=el._boardGame%>'>
               
             <span class='del'> Delete </span>
             </li>
@@ -35,9 +35,9 @@
       
       
        <ul>
-    <% todos.forEach( el => { %> 
+    <% faves.forEach( el => { %> 
         
-                <li class='videoGame' data-id='<%=el._videoGame%>'>
+                <li class='videoGame' class='faveGameItem' data-id='<%=el._videoGame%>'>
                
             <span class='del'> Delete </span>
             </li>
@@ -47,9 +47,9 @@
       
             
        <ul>
-    <% todos.forEach( el => { %> 
+    <% faves.forEach( el => { %> 
            
-                  <li class='cardGame' data-id='<%=el._cardGame%>'>
+                  <li class='cardGame' class='faveGameItem' data-id='<%=el._cardGame%>'>
                    
             <span class='del'> Delete </span>
             </li>
@@ -57,7 +57,7 @@
     </ul>
       
           <ul>
-    <% todos.forEach( el => { %> 
+    <% faves.forEach( el => { %> 
            
                     <li class='userId' data-id='<%=el._userId%>'>
             <span class='del'> Delete </span>
@@ -65,12 +65,12 @@
     <% }) %>    
     </ul>
             
-<!--        <ul>
-    <% todos.forEach( el => { %> 
-            <li class='todoItem' data-id='<%=el._id%>'>
-              <li class='boardGame' data-id='<%=el._boardGame%>'>
-                <li class='videoGame' data-id='<%=el._videoGame%>'>
-                  <li class='cardGame' data-id='<%=el._cardGame%>'>
+    <ul>
+    <% faves.forEach( el => { %> 
+           
+              <li class='boardGame' class='faveGameItem' data-id='<%=el._boardGame%>'>
+                <li class='videoGame' class='faveGameItem' data-id='<%=el._videoGame%>'>
+                  <li class='cardGame' class='faveGameItem' data-id='<%=el._cardGame%>'>
                     <li class='userId' data-id='<%=el._userId%>'>
             <span class='del'> Delete </span>
             </li>
@@ -80,7 +80,7 @@
     <form action="/todos/createFaveGame" method='POST'>
         <input type="text" placeholder="Enter Favorite game" name='faveGameItem'>
         <input type="submit">
-    </form> -->
+    </form>
 
     <a href="/logout">Logout</a>
 
@@ -88,10 +88,8 @@
 </body>
 </html>
 
-<!--and here is todos:-->
+and here is todos:-->
 
-// the main page that lists the users todo -np
-// model -> toDo schema 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -103,20 +101,20 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Todos</h1>
-    <ul>
-    <% todos.forEach( el => { %>
-            <li class='todoItem' data-id='<%=el._id%>'>
-                <span class='del'> Delete </span>
-            </li>
-    <% }) %>    
-    </ul>
+    <h1>Favorite Games</h1>
 
 
-    <form action="/todos/createFaveGame" method='POST'>
-        <input type="text" placeholder="Enter Todo Item" name='faveGameItem'>
+
+    <form action="/favorites/createFave" method='POST'>
+        <input type="text" placeholder="What games do you like?" name='faveGameItem'>
+        </br/>
+        <input type="checkbox" name="boardGame" id="boardGame"><label for="boardGame">Board Game</label>
+        <input type="checkbox" name="videoGame" id="videoGame"><label for="videoGame">Video Game</label>
+        <input type="checkbox" name="cardGame" id="cardGame"><label for="cardGame">Card Game</label>
         <input type="submit">
     </form>
+
+
 
     <a href="/logout">Logout</a>
   <a href="/favorites">Favorite Games</a>

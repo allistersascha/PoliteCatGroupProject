@@ -28,3 +28,8 @@ GitHub:  Sarkis1995
 Discord: Muckitymuck #5477
 Time Zone: CDT
 github: muckitymuck
+
+## Nirmal Patel
+He/him
+Discord: Neal#4362
+Time Zone: CST
