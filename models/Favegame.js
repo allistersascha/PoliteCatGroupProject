@@ -7,23 +7,20 @@ const mongoose = require('mongoose')
 
 const FaveGameSchema = new mongoose.Schema({
   Game: {
-    type: [String],
+    type: String,
     required: true,
   },
   boardGame: {
-    type: [Boolean],
-    required: true,
+    type: Boolean,
   },
   videoGame: {
-    type: [Boolean],
-    required: true,
+    type: Boolean,
   },
  cardGame: {
-    type: [Boolean],
-    required: true,
+    type: Boolean,
   },
   userId: {
-    type: [String],
+    type: String,
     required: true
   }
 })

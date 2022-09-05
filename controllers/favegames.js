@@ -1,12 +1,12 @@
 //Sets Todo as a var for models/FaveGame
-const Favegame = require("../models/Favegame.js");
+const FaveGame = require("../models/Favegame.js");
 
 // All the different operations you can do in the todo list
 module.exports = {
   getFaves: async (req, res) => {
     console.log(req.user);
     try {
-      const faveGameItem = await Favegame.find({ userId: req.user.id });
+      const faveGameItem = await FaveGame.find({ userId: req.user.id });
       res.render("favorites.ejs", { todos: faveGameItem, user: req.user });
     } catch (err) {
       console.log(err);
@@ -14,8 +14,11 @@ module.exports = {
   }, // create a todo task
   createFave: async (req, res) => {
     try {
-      await Favegame.create({
-        faveGames: req.body.faveGameItems,
+      await FaveGame.create({
+        Game: req.body.faveGameItem,
+        boardGame: req.body.boardGame ? true: false,
+        videoGame: req.body.videoGame ? true: false,
+        cardGame: req.body.cardGame ? true: false,
         //To be completed: add Game Booleans and conditional
         //boardGame, videoGame, cardGame
         // Original code// completed: false,
