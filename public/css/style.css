@@ -170,5 +170,16 @@ li {
     margin-left: 30px;
 }
 
+.linx {
+    text-align: center;
+}
+
+.linx:hover {
+    color: #ece38d;
+}
+
+.linx a {
+    text-align: center;
+}
 
 
