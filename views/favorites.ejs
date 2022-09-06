@@ -9,20 +9,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favorites</title>
+    <title>Favorite Games</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Profile Page</h1>
+    <h1>User's Game List</h1>
     <ul>
     <% faves.forEach( el => { %> 
             <li class='faveGameItem' data-id='<%=el._id%>'>
-         
+                <span class= "Game" class="<%= el.boardGame === true ? 'Board Game' : el.cardGame === true ? 'Card Game' : 'Video Game'%>"<%= el.faves %></span>
             <span class='del'> Delete </span>
             </li>
     <% }) %>    
     </ul>
-      
+      <!--
        <ul>
     <% faves.forEach( el => { %> 
            
@@ -49,22 +49,22 @@
        <ul>
     <% faves.forEach( el => { %> 
            
-                  <li class='cardGame' class='faveGameItem' data-id='<%=el._cardGame%>'>
-                   
+        <li class='cardGame' class='faveGameItem' data-id='<%=el._cardGame%>'>           
             <span class='del'> Delete </span>
-            </li>
+        </li>
     <% }) %>    
     </ul>
       
-          <ul>
-    <% faves.forEach( el => { %> 
-           
-                    <li class='userId' data-id='<%=el._userId%>'>
+        <ul>
+        <% faves.forEach( el => { %> 
+        
+            <li class='userId' data-id='<%=el._userId%>'>
             <span class='del'> Delete </span>
             </li>
     <% }) %>    
     </ul>
-            
+    -->
+    <!--       
     <ul>
     <% faves.forEach( el => { %> 
            
@@ -77,16 +77,6 @@
     <% }) %>    
     </ul> -->
 <!--
-    <form action="/todos/createFaveGame" method='POST'>
-        <input type="text" placeholder="Enter Favorite game" name='faveGameItem'>
-        <input type="submit">
-    </form>
-
-    <a href="/logout">Logout</a>
-
-    <script src="js/main.js"></script>
-</body>
-</html>
 
 and here is todos:-->
 
@@ -108,9 +98,9 @@ and here is todos:-->
     <form action="/favorites/createFave" method='POST'>
         <input type="text" placeholder="What games do you like?" name='faveGameItem'>
         </br/>
-        <input type="checkbox" name="boardGame" id="boardGame"><label for="boardGame">Board Game</label>
-        <input type="checkbox" name="videoGame" id="videoGame"><label for="videoGame">Video Game</label>
-        <input type="checkbox" name="cardGame" id="cardGame"><label for="cardGame">Card Game</label>
+        <input type="checkbox" name="boardGame" class='faveGameItem' id="boardGame"><label for="boardGame">Board Game</label>
+        <input type="checkbox" name="videoGame" class='faveGameItem' id="videoGame"><label for="videoGame">Video Game</label>
+        <input type="checkbox" name="cardGame" class='faveGameItem' id="cardGame"><label for="cardGame">Card Game</label>
         <input type="submit">
     </form>
 
