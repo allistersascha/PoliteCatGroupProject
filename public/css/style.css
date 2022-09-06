@@ -1,10 +1,150 @@
-h1{
-    color: red;
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
 }
-.completed{
-    text-decoration: line-through;
-    color: gray;
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
 }
-.not{
-    text-decoration: underline;
+
+.clear {
+	clear: both;
 }
+
+@media screen and (max-width: 600px){
+    nav.responsive {position: relative;}
+    nav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    nav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+    background-color: #1a0834;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+
+.active {
+    font-family: 'Aboreto', cursive, serif;
+    font-size: 16px;
+    text-decoration: bold;
+    color: white;
+}
+
+h1 {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 24px;
+    color: white;
+    padding: 14px 16px;
+    text-align: center;
+}
+
+span, label, a {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+nav{
+    overflow: hidden;
+    background-color: #000;
+    position: relative;
+}
+
+nav #navLinks {
+    display: none;
+}
+
+nav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    
+}
+
+nav a.icon {
+    background: #ece38d;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+nav a:hover {
+    background-color: black;
+    color: white;
+    
+}
+
+nav .active {
+    background-color: #01847b;
+    color: white;
+}
+
+section {
+    margin: 6px;
+    
+}
+
+h2 {
+    color: #ece38d;
+    padding-left: 30px;
+}
+
+
+#videoGameSection > h2 {
+    font-family: 'Silkscreen', cursive, serif;
+    font-size: 30px;
+    
+}
+
+#boardGameSection > h2 {
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 30px;
+    
+}
+
+#cardGameSection > h2 {
+    font-family: 'Stick No Bills', sans-serif;
+    font-size: 30px;
+ 
+}
+
+.del {
+    color: #01847b;
+}
+
+form {
+    padding-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
