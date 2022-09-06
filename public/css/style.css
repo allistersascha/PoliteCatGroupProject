@@ -64,6 +64,7 @@ span, label, a, li {
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     font-size: 22px;
     color: white;
+    font-weight: bold;
 }
 
 nav{
