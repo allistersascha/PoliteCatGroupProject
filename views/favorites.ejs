@@ -25,9 +25,38 @@
         <% }) %>    
         </ul>
     </section>
+
+<!-- Section for vidya -->
+
+<section id="videoGameSection">
+      <h2>Video Games</h2>
+        <ul>
+        <% faves.forEach( el => { %> 
+        <% if(el.videoGame) {%> 
+          <li class='faveGameItem' data-id='<%=el._id%>'>
+            <span class="videoGame"><%= el.Game %> </span>
+            <span class='del'> Delete </span>
+          </li>
+          <% } %> 
+        <% }) %>    
+        </ul>
+    </section>
+
+<!-- Section for card games-->
     
-  <!-- TO DO  -->
-  <!-- Sections for cardGames and videoGames? -->
+<section id="cardGameSection">
+      <h2>Card Games</h2>
+        <ul>
+        <% faves.forEach( el => { %> 
+        <% if(el.cardGame) {%> 
+          <li class='faveGameItem' data-id='<%=el._id%>'>
+            <span class="cardGame"><%= el.Game %> </span>
+            <span class='del'> Delete </span>
+          </li>
+          <% } %> 
+        <% }) %>    
+        </ul>
+    </section>
 
 
 
