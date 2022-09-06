@@ -5,12 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>List Your Favorite Games!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Kdam+Thmor+Pro&family=Silkscreen&family=Stick+No+Bills:wght@300&family=Zen+Kaku+Gothic+Antique:wght@300&display=swap" rel="stylesheet"> 
+    <!--obnoxious vidyagame font = silksreen, standard text font is Zen Kaku, board game is Kdam Thmor, card game is Stick No Bills, h1 is Aboreto -->
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/06d0c62c4a.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1>User's Game List</h1>
+<header>
+<nav class = "itsnav" id = "daNav">
+                <a href = "#home" class = "active">WHAT DO YOU PLAY?</a>
+                <!-- hidden nav links oooooh -->
+                <section id="navLinks">
+                    <a href="/favorites">Favorite Games</a>
+                    <a href="/logout">Logout</a>
+                </section>
+           
+            <!--da borger go here to toggle ya links-->
+                <a href="javascript:void(0);" class="icon" onclick="showNavLinks()">
+                <!-- <a href="javascript:void(0);" class="icon" onclick="dOtherFunction()"> -->
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </nav> 
+  <h1>Your Game Lists</h1>
 
+</header>
   <!-- Board Games -->
     <section id="boardGameSection">
       <h2>Board Games</h2>
@@ -19,7 +40,7 @@
         <% if(el.boardGame) {%> 
           <li class='faveGameItem' data-id='<%=el._id%>'>
             <span class="boardGame"><%= el.Game %> </span>
-            <span class='del'> Delete </span>
+            <span class='del'> (Delete?)  </span>
           </li>
           <% } %> 
         <% }) %>    
@@ -35,7 +56,7 @@
         <% if(el.videoGame) {%> 
           <li class='faveGameItem' data-id='<%=el._id%>'>
             <span class="videoGame"><%= el.Game %> </span>
-            <span class='del'> Delete </span>
+            <span class='del'> (Delete?) </span>
           </li>
           <% } %> 
         <% }) %>    
@@ -51,7 +72,7 @@
         <% if(el.cardGame) {%> 
           <li class='faveGameItem' data-id='<%=el._id%>'>
             <span class="cardGame"><%= el.Game %> </span>
-            <span class='del'> Delete </span>
+            <span class='del'> (Delete?)  </span>
           </li>
           <% } %> 
         <% }) %>    
@@ -71,8 +92,8 @@
 
 
 
-  <a href="/logout">Logout</a>
-  <a href="/favorites">Favorite Games</a>
+  
+
     <script src="js/main.js"></script>
 </body>
 </html>
