@@ -47,14 +47,15 @@ body {
 
 .active {
     font-family: 'Aboreto', cursive, serif;
-    font-size: 16px;
+    font-size: 20px;
     text-decoration: bold;
     color: white;
 }
 
 h1 {
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
-    font-size: 24px;
+    font-size: 30px;
+    font-weight: bolder;
     color: white;
     padding: 14px 16px;
     text-align: center;
@@ -62,7 +63,7 @@ h1 {
 
 span, label, a {
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     color: white;
 }
 
@@ -141,6 +142,21 @@ form {
     padding-left: 30px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.boardGame {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.videoGame{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cardGame{
+    font-size: 20px;
+    font-weight: bold;
 }
 
 
