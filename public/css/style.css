@@ -47,22 +47,22 @@ body {
 
 .active {
     font-family: 'Aboreto', cursive, serif;
-    font-size: 16px;
+    font-size: 20px;
     text-decoration: bold;
     color: white;
 }
 
 h1 {
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
-    font-size: 24px;
+    font-size: 32px;
     color: white;
     padding: 14px 16px;
     text-align: center;
 }
 
-span, label, a {
+span, label, a, li {
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
-    font-size: 18px;
+    font-size: 22px;
     color: white;
 }
 
@@ -80,7 +80,7 @@ nav a {
     color: white;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     display: block;
     
 }
@@ -89,12 +89,13 @@ nav a.icon {
     background: #ece38d;
     display: block;
     position: absolute;
+    color: #1a0834;
     right: 0;
     top: 0;
 }
 
 nav a:hover {
-    background-color: black;
+    background-color: #1a0834;
     color: white;
     
 }
@@ -105,31 +106,31 @@ nav .active {
 }
 
 section {
-    margin: 6px;
+    margin: 15px 50px;
     
 }
 
 h2 {
     color: #ece38d;
-    padding-left: 30px;
+    padding-left: 32px;
 }
 
 
 #videoGameSection > h2 {
     font-family: 'Silkscreen', cursive, serif;
-    font-size: 30px;
+    font-size: 32px;
     
 }
 
 #boardGameSection > h2 {
     font-family: 'Kdam Thmor Pro', sans-serif;
-    font-size: 30px;
+    font-size: 32px;
     
 }
 
 #cardGameSection > h2 {
     font-family: 'Stick No Bills', sans-serif;
-    font-size: 30px;
+    font-size: 32px;
  
 }
 
@@ -137,14 +138,36 @@ h2 {
     color: #01847b;
 }
 
+.del:hover {
+    color: #ece38d;
+}
+
 form {
-    padding-left: 30px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#button {
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 22px;
+    color: white;
+    background-color: #01847b;
+    font-family: 'Silkscreen', cursive, serif;
+    margin: 3px;
+    border: 2px solid white;
+}
+
+#button:hover {
+    color: #1a0834;
+    background-color: #ece38d;
+    border: 2px solid #1a0834;
+}
+
+li {
+    list-style-type: circle;
+    margin-left: 30px;
 }
 
 
 
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
