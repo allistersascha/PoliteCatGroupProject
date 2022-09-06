@@ -25,4 +25,11 @@ async function deleteFave(){
     }
 }
 
-
+function showNavLinks(){
+    let x = document.getElementById("navLinks");
+    if (x.style.display === "block"){
+        x.style.display = "none";
+    }else{
+        x.style.display = "block";
+    }
+}
