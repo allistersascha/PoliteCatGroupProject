@@ -1,15 +1,11 @@
 <!-- I have combined the favorites.ejs and todos.ejs files from Glitch, as I think we'll be wanting pieces from both. Here is favorites:-->
-
-
 <!DOCTYPE html>
-
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favorite Games</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -17,53 +13,14 @@
     <ul>
     <% faves.forEach( el => { %> 
             <li class='faveGameItem' data-id='<%=el._id%>'>
-                <span class= "Game" class="<%= el.boardGame === true ? 'Board Game' : el.cardGame === true ? 'Card Game' : 'Video Game'%>"<%= el.faves %></span>
-            <span class='del'> Delete </span>
-            </li>
-    <% }) %>    
-    </ul>
-      <!--
-       <ul>
-    <% faves.forEach( el => { %> 
-           
-              <li class='boardGame' class='faveGameItem' data-id='<%=el._boardGame%>'>
-              
+                <span class= "Game" class="<%= el.boardGame === true ? 'boardGame' : el.cardGame === true ? 'cardGame' : 'videoGame'%>"<%= el.Game %></span>
             <span class='del'> Delete </span>
             </li>
     <% }) %>    
     </ul>
       
-      
-       <ul>
-    <% faves.forEach( el => { %> 
-        
-                <li class='videoGame' class='faveGameItem' data-id='<%=el._videoGame%>'>
-               
-            <span class='del'> Delete </span>
-            </li>
-    <% }) %>    
     </ul>
-
-      
-            
-       <ul>
-    <% faves.forEach( el => { %> 
-           
-        <li class='cardGame' class='faveGameItem' data-id='<%=el._cardGame%>'>           
-            <span class='del'> Delete </span>
-        </li>
-    <% }) %>    
-    </ul>
-      
-        <ul>
-        <% faves.forEach( el => { %> 
-        
-            <li class='userId' data-id='<%=el._userId%>'>
-            <span class='del'> Delete </span>
-            </li>
-    <% }) %>    
-    </ul>
-    -->
+    
     <!--       
     <ul>
     <% faves.forEach( el => { %> 
@@ -81,17 +38,7 @@
 and here is todos:-->
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <h1>Favorite Games</h1>
+
 
 
 
