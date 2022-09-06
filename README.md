@@ -1,11 +1,11 @@
 # PoliteCatGroupProject
-#100Devs small group project using MongoDB, Mongoose, and Passport authentication
+#100Devs small group project using MongoDB, Mongoose, and Passport authentication.
 
-The project has a landing page with Login or Signup options. Once a user creates a login credential and successfully logs in, they are routed to the Favorites Page. This is a customized page where the user can add which games they love and see the games they personally have added previously. 
+The project has a landing page with Login and Signup options. Once a user creates a login credential and successfully logs in, they are routed to the Favorites Page. This is a customized page where the user can add which games they love and see the games they personally have added previously. 
 
-Users can easily add their Favorite Game by typing the name in the field that says, “What games do you like? After they type the name of the game, the user can categorize the game by selecting the checkbox options of Board Games, Video Games, and/or Card Games.
+Users can easily add their Favorite Game by typing the name in the field that says, “What games do you like?". After they type the name of the game, the user can categorize the game by selecting the checkbox options of Board Games, Video Games, and/or Card Games.
 
-For the user’s convenience there is a navigation bar on top of the page, if the user wants to log out they can select the 3 lines on the top right side of the page and click logout.
+For the user’s convenience there is a navigation bar on top of the page, if the user wants to log out they can select the menu on the top right side of the page and click logout.
 
 # Features
 - Login & Signup Page
