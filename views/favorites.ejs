@@ -9,36 +9,25 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>User's Game List</h1>
-    <ul>
-    <% faves.forEach( el => { %> 
-            <li class='faveGameItem' data-id='<%=el._id%>'>
-                <span class= "Game" class="<%= el.boardGame === true ? 'boardGame' : el.cardGame === true ? 'cardGame' : 'videoGame'%>"<%= el.Game %></span>
+  <h1>User's Game List</h1>
+
+  <!-- Board Games -->
+    <section id="boardGameSection">
+      <h2>Board Games</h2>
+        <ul>
+        <% faves.forEach( el => { %> 
+        <% if(el.boardGame) {%> 
+          <li class='faveGameItem' data-id='<%=el._id%>'>
+            <span class="boardGame"><%= el.Game %> </span>
             <span class='del'> Delete </span>
-            </li>
-    <% }) %>    
-    </ul>
-      
-    </ul>
+          </li>
+          <% } %> 
+        <% }) %>    
+        </ul>
+    </section>
     
-    <!--       
-    <ul>
-    <% faves.forEach( el => { %> 
-           
-              <li class='boardGame' class='faveGameItem' data-id='<%=el._boardGame%>'>
-                <li class='videoGame' class='faveGameItem' data-id='<%=el._videoGame%>'>
-                  <li class='cardGame' class='faveGameItem' data-id='<%=el._cardGame%>'>
-                    <li class='userId' data-id='<%=el._userId%>'>
-            <span class='del'> Delete </span>
-            </li>
-    <% }) %>    
-    </ul> -->
-<!--
-
-and here is todos:-->
-
-
-
+  <!-- TO DO  -->
+  <!-- Sections for cardGames and videoGames? -->
 
 
 
@@ -53,7 +42,7 @@ and here is todos:-->
 
 
 
-    <a href="/logout">Logout</a>
+  <a href="/logout">Logout</a>
   <a href="/favorites">Favorite Games</a>
     <script src="js/main.js"></script>
 </body>
